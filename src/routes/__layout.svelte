@@ -1,7 +1,6 @@
 <script context="module">
-  //  protecting all pages that start with /admin/* in their path.
+  //  protecting page /admin
   export async function load({ page, session }) {
-    console.log(page);
     if (page.path==='/admin' && session.user === "") {
       return { redirect: "/", status: 302 };
     }
